@@ -198,7 +198,7 @@ if __name__ == "__main__":
     parser.add_argument('-ss', '--step_size', help='Step Size. Default: 1.5', type=float, required=False, default = 1.5)
     parser.add_argument('-l', '--layer', help='Layer to use. Default: inception_4c/output. Suggested Layers: inception_3b/5x5_reduce,inception_4e/pool_proj', type=str,required=False,  default = "inception_4c/output")
     parser.add_argument('-gpu', '--gpu', help='Use GPU or CPU.', type=int, required=False,default = 0)
-    parser.add_argument('-dpr', '--go_deeper', help='Use single frame and feed result (dream) of it to itself.This is the default option if the input file is jpg/png.', type=int, required=False,default = 50)
+    parser.add_argument('-deeper', '--deeper', help='Use single frame and feed result (dream) of it to itself.This is the default option if the input file is jpg/png.', type=int, required=False,default = 50)
     parser.add_argument('-scale_co', '--scale_coefficient', help='Scale coefficient for go_deeper mode.', type=float, required=False,default = 0.05)
  
     
@@ -206,7 +206,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
         
     main(args.input,args.octaves, args.octave_scale, args.iterations, args.jitter,
-             args.step_size, args.layer,args.gpu,args.go_deeper,args.scale_coefficient) 
+             args.step_size, args.layer,args.gpu,args.deeper,args.scale_coefficient) 
 
     
     
