@@ -59,19 +59,21 @@ These files are from their official [page](https://www.lcdf.org/gifsicle/) the m
 ```
 python deep-dream.py -input bear.gif -gpu 1
 ```
-Original:
-![bear.gif](https://github.com/pavitrakumar78/DeepDreamsGIF/blob/master/examples/bear.gif)
-After applying deepdream:
-![bear-dream.gif](https://github.com/pavitrakumar78/DeepDreamsGIF/blob/master/examples/bear-dream.gif)
-
-
-A much scarier example..
-![train.gif](https://github.com/pavitrakumar78/DeepDreamsGIF/blob/master/examples/train.gif)
-After applying deepdream:
-![train-dream.gif](https://github.com/pavitrakumar78/DeepDreamsGIF/blob/master/examples/train-dream.gif)
+  
+####Original:  
+![bear.gif](https://github.com/pavitrakumar78/DeepDreamsGIF/blob/master/examples/bear.gif)  
+####After applying deepdream:  
+![bear-dream.gif](https://github.com/pavitrakumar78/DeepDreamsGIF/blob/master/examples/bear-dream.gif)  
+  
+  
+####A much scarier example..  
+![train.gif](https://github.com/pavitrakumar78/DeepDreamsGIF/blob/master/examples/train.gif)  
+####After applying deepdream:  
+![train-dream.gif](https://github.com/pavitrakumar78/DeepDreamsGIF/blob/master/examples/train-dream.gif)  
 
 ```
 python deep-dream.py -input flowers.jpg -gpu 1 -dpr 100
 ```
-![flower-dream-deepr.gif](https://github.com/pavitrakumar78/DeepDreamsGIF/blob/master/examples/flowers-dream-deepr.gif)
+  
+![flower-dream-deepr.gif](https://github.com/pavitrakumar78/DeepDreamsGIF/blob/master/examples/flowers-dream-deepr.gif)  
 
