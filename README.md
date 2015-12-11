@@ -21,7 +21,7 @@ Usage:
 ```
 python deep-dream.py -inp INPUT [-oct OCTAVES] [-oct_s OCTAVE_SCALE]
                      [-itr ITERATIONS] [-j JITTER] [-ss STEP_SIZE] [-l LAYER]
-                     [-gpu GPU] [-dpr GO_DEEPER] [-scale_co SCALE_COEFFICIENT]
+                     [-gpu GPU] [-deeper DEEPER] [-scale_co SCALE_COEFFICIENT]
 ```
 The arguments are pretty much self-explanatory.
 This script can convert a GIF to a deep-dream version of itself by de-constructing the GIF into frames, applying the deepdream function on each of the frames and put it back into a GIF.  
@@ -57,7 +57,7 @@ These files are from their official [page](https://www.lcdf.org/gifsicle/) the m
 
 ##Examples:
 ```
-python deep-dream.py -input bear.gif -gpu 1
+python deep-dream.py --input bear.gif --gpu 1
 ```
   
 ####Original:  
@@ -73,7 +73,7 @@ python deep-dream.py -input bear.gif -gpu 1
 
 ####An inception style gif from an image:
 ```
-python deep-dream.py -input flowers.jpg -gpu 1 -dpr 100
+python deep-dream.py --input flowers.jpg --gpu 1 --deeper 100
 ```
   
 ![flower-dream-deepr.gif](https://github.com/pavitrakumar78/DeepDreamsGIF/blob/master/examples/flowers-dream-deepr.gif)  
