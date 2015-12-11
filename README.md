@@ -24,7 +24,8 @@ python deep-dream.py -inp INPUT [-oct OCTAVES] [-oct_s OCTAVE_SCALE]
                      [-gpu GPU] [-dpr GO_DEEPER] [-scale_co SCALE_COEFFICIENT]
 ```
 The arguments are pretty much self-explanatory.
-This script can convert a GIF to a deep-dream version of itself by de-constructing the GIF into frames, applying the deepdream function on each of the frames and put it back into a GIF.  The convertion of GIF to frames and vice-versa is done by [gifsicle](https://www.lcdf.org/gifsicle/) - an open-source command-line tool for creating, editing, and getting information about GIF images and animations.  
+This script can convert a GIF to a deep-dream version of itself by de-constructing the GIF into frames, applying the deepdream function on each of the frames and put it back into a GIF.  
+The convertion of GIF to frames and vice-versa is done by [gifsicle](https://www.lcdf.org/gifsicle/) - an open-source command-line tool for creating, editing, and getting information about GIF images and animations.  
 This script can also convert a single image into a gif by repeatedly scaling (zooming) and applying the deep dream function on the previous frames to create an "inception" like gif which keeps going deeper and deeper. This mode is default if the input is an image, the depth of scaling is controlled by -dpr functions, by default it zooms in a scale of -scale_co for 50 frames.
   
 This script only uses the (GoogleLeNet)[https://github.com/BVLC/caffe/tree/master/models/bvlc_googlenet] model, so you might need to modify the modify the script to change location of those files.
