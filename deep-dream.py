@@ -98,6 +98,9 @@ def main(img_name,octaves=4,octave_scale=1.4,iterations=10,jitter=32,step_size=1
         os.system("mkdir dreams")
     #Use gifsicle to get frames from the gif and put it in an temporary output folder
     if img_name[-3:]=='gif':
+            if not os.path.exists(img_name):
+                print "No GIF found!"
+                exit(1)
         gif_mode = 1
         os.system("gifsicle --explode -U "+img_name+" --output frame")
         os.system("ren frame.* frame.*.jpg")
@@ -163,6 +166,9 @@ def main(img_name,octaves=4,octave_scale=1.4,iterations=10,jitter=32,step_size=1
                 cnt+=1
                 print str(cnt)+" frames completed out of "+str(total)
     else: #go-deeper mode, takes in a single jpg image and dreates dreams of itself.
+        if not os.path.exists(img_name):
+            print "No IMAGE found!"
+            exit(1)
         img = (PIL.Image.open(path+"\\"+img_name))
         img = img.convert('RGB')
         img = np.array(img)
