@@ -97,10 +97,10 @@ def main(img_name,octaves=4,octave_scale=1.4,iterations=10,jitter=32,step_size=1
         os.system("rm -r dreams")
         os.system("mkdir dreams")
     #Use gifsicle to get frames from the gif and put it in an temporary output folder
+    if not os.path.exists(img_name):
+        print "No input file found!"
+        exit(1)
     if img_name[-3:]=='gif':
-            if not os.path.exists(img_name):
-                print "No GIF found!"
-                exit(1)
         gif_mode = 1
         os.system("gifsicle --explode -U "+img_name+" --output frame")
         os.system("ren frame.* frame.*.jpg")
@@ -118,19 +118,19 @@ def main(img_name,octaves=4,octave_scale=1.4,iterations=10,jitter=32,step_size=1
         print "You are using CPU mode, this might take some time"
        
     
-    model_path = 'E:/Software/WinPython-64bit-2.7.10.3/python-2.7.10.amd64/caffe/models/bvlc_googlenet/' # substitute your path here
+    model_path = './caffe/models/bvlc_googlenet/' # substitute your path here
     net_fn   = model_path + 'deploy.prototxt'
     param_fn = model_path + 'bvlc_googlenet.caffemodel'
     
     """
     Other models : ( need to change default end param if you are going to use this )
     
-    model_path = 'E:/Software/WinPython-64bit-2.7.10.3/python-2.7.10.amd64/caffe/models/vgg_face_caffe/' # substitute your path here
+    model_path = './caffe/models/vgg_face_caffe/' 
     net_fn   = model_path + 'VGG_FACE_deploy.prototxt'
     param_fn = model_path + 'VGG_FACE.caffemodel'
     #(example end params: 'conv1_1','conv1_2','pool1','conv2_1','conv2_2','pool2','conv3_1','conv3_2','conv3_3','pool3','conv4_1','conv4_2','conv4_3','pool4','conv5_1','conv5_2','conv5_3','pool5')
     
-    model_path = 'E:/Software/WinPython-64bit-2.7.10.3/python-2.7.10.amd64/caffe/models/finetune_flickr_style/' # substitute your path here
+    model_path = './caffe/models/finetune_flickr_style/' 
     net_fn   = model_path + 'deploy.prototxt'
     param_fn = model_path + 'finetune_flickr_style.caffemodel'
     #(example end params: 'conv1','pool1','norm1','conv2','pool2','norm2','conv3','conv4','conv5','pool5')
@@ -166,9 +166,6 @@ def main(img_name,octaves=4,octave_scale=1.4,iterations=10,jitter=32,step_size=1
                 cnt+=1
                 print str(cnt)+" frames completed out of "+str(total)
     else: #go-deeper mode, takes in a single jpg image and dreates dreams of itself.
-        if not os.path.exists(img_name):
-            print "No IMAGE found!"
-            exit(1)
         img = (PIL.Image.open(path+"\\"+img_name))
         img = img.convert('RGB')
         img = np.array(img)
