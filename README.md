@@ -45,7 +45,7 @@ Only images are accepted as input. If -p param is set to 1 (default), the only t
   
 Regardless of the value of -p, a text file with the names of all the layers is always saved in the current directory on executing the script.
 
-Usefull links to get various models:
+Usefull links to get other models:
 
 - [GoogleLeNet](https://github.com/BVLC/caffe/tree/master/models/bvlc_googlenet) (Used in previous script)
 - [MIT's Places](http://places.csail.mit.edu/downloadCNN.html)
