@@ -60,15 +60,15 @@ These files are from their official [page](https://www.lcdf.org/gifsicle/) the m
 python deep-dream.py -input bear.gif -gpu 1
 ```
 Original:
-![bear.gif](https://raw.github.com/pavitrakumar78/DeepDreamsGIF/examples/bear.gif)
+![bear.gif](https://github.com/pavitrakumar78/DeepDreamsGIF/blob/master/examples/bear.gif)
 After applying deepdream:
-![bear-dream.gif](https://raw.github.com/pavitrakumar78/DeepDreamsGIF/examples/bear-dream.gif)
+![bear-dream.gif](https://github.com/pavitrakumar78/DeepDreamsGIF/blob/master/examples/bear-dream.gif)
 
 
 A much scarier example..
-![train.gif](https://raw.github.com/pavitrakumar78/DeepDreamsGIF/examples/train.gif)
+![train.gif](https://github.com/pavitrakumar78/DeepDreamsGIF/blob/master/examples/train.gif)
 After applying deepdream:
-![train-dream.gif](https://raw.github.com/pavitrakumar78/DeepDreamsGIF/examples/train-dream.gif)
+![train-dream.gif](https://github.com/pavitrakumar78/DeepDreamsGIF/blob/master/examples/train-dream.gif)
 
 ```
 python deep-dream.py -input flowers.jpg -gpu 1 -dpr 100
