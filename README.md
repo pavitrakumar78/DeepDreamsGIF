@@ -40,7 +40,9 @@ python try-layers.py -inp INPUT -deploy_file DEPLOY_FILE -caffe_model
                      [-s STEP_SIZE] [-gpu GPU] [-scale_coef SCALE_COEFFICIENT]
 ```
 Almost same as the previous script, but this script allows you to use your own custom models for generating images and also you get to know about the layers present in the the model for use with the -l (layer) param in previous script.  
+  
 Only images are accepted as input. If -p param is set to 1 (default), the only the names of the layer will be printed in the console, if -p is set to 0 then the image output for each of the layer is saved in a 'frames' folder in the same directory.  
+  
 Regardless of the value of -p, a text file with the names of all the layers is always saved in the current directory on executing the script.
 
 Usefull links to get various models:
