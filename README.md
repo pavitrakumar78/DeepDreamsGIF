@@ -71,6 +71,7 @@ python deep-dream.py -input bear.gif -gpu 1
 ####After applying deepdream:  
 ![train-dream.gif](https://github.com/pavitrakumar78/DeepDreamsGIF/blob/master/examples/train-dream.gif)  
 
+####A GO_DEEPR example:  
 ```
 python deep-dream.py -input flowers.jpg -gpu 1 -dpr 100
 ```
