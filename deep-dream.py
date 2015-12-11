@@ -93,7 +93,7 @@ def main(img_name,octaves=4,octave_scale=1.4,iterations=10,jitter=32,step_size=1
         print "Can't process GIFs, gifsicle.exe not found!"
         exit(1)
     if os.system("mkdir dreams"): #create a remporary file for image processing/storing
-        print "temp. output folder already exists, deleting exisisting one.."
+        print "temporary output folder already exists, deleting exisisting one.."
         os.system("rm -r dreams")
         os.system("mkdir dreams")
     #Use gifsicle to get frames from the gif and put it in an temporary output folder
