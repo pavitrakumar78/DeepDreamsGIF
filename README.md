@@ -66,5 +66,5 @@ After applying deepdream:
 ```
 python deep-dream.py -input flowers.jpg -gpu 1 -dpr 100
 ```
-![flower-dream-deepr.gif](https://raw.github.com/pavitrakumar78/DeepDreamsGIF/examples/flowers-dream-deepr.gif)
+![flower-dream-deepr.gif](https://raw.github.com/pavitrakumar/DeepDreamsGIF/examples/flowers-dream-deepr.gif)
 
