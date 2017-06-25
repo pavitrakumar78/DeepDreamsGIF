@@ -3,7 +3,7 @@
 Python script to convert any GIF to a REALLY trippy GIF using Google DeepNet model.
 
 
-Requirements:
+## Requirements:
 
 - Python 2.7
 - caffe and its dependencies
@@ -13,11 +13,11 @@ This is based on Google's [Blog](http://googleresearch.blogspot.ch/2015/06/incep
 
 I have used the same code as the one found in Google's repo with slight modifications to make it work for both GIFs and images.  All the parameters can be tweaked right in the command line arguments.
 
-##File Descriptions:
+## File Descriptions:
 
-###deep-dream.py
+### deep-dream.py
 
-Usage:  
+#### Usage:  
 ```
 python deep-dream.py -inp INPUT [-oct OCTAVES] [-oct_s OCTAVE_SCALE]
                      [-itr ITERATIONS] [-j JITTER] [-ss STEP_SIZE] [-l LAYER]
@@ -32,7 +32,7 @@ This script can also convert a single image into a gif by repeatedly scaling (zo
   
 This script only uses the (GoogleLeNet)[https://github.com/BVLC/caffe/tree/master/models/bvlc_googlenet] model, so you might need to modify the modify the script to change location of those files.
 
-###try-layers.py
+### try-layers.py
 ```
 python try-layers.py -inp INPUT -deploy_file DEPLOY_FILE -caffe_model
                      CAFFE_MODEL [-p PRINT_ONLY] [-oct OCTAVES]
@@ -52,26 +52,26 @@ Usefull links to get other models:
 - [Model Zoo](https://github.com/BVLC/caffe/wiki/Model-Zoo) (A list of many other models trained on various objects)
 
 
-###gifsicle.exe and gifsicle.dif
+### gifsicle.exe and gifsicle.dif
 These files are from their official [page](https://www.lcdf.org/gifsicle/) the main script depends on these files to construct and de-construct GIFs. Place these files in the same folder as the script you are executing.
 
-##Examples:
+## Examples:
 ```
 python deep-dream.py --input bear.gif --gpu 1
 ```
   
-####Original:  
+#### Original:  
 ![bear.gif](https://github.com/pavitrakumar78/DeepDreamsGIF/blob/master/examples/bear.gif)  
-####After applying deepdream:  
+#### After applying deepdream:  
 ![bear-dream.gif](https://github.com/pavitrakumar78/DeepDreamsGIF/blob/master/examples/bear-dream.gif)  
   
   
-####A much scarier example..  
+#### A much scarier example..  
 ![train.gif](https://github.com/pavitrakumar78/DeepDreamsGIF/blob/master/examples/train.gif)  
 ####After applying deepdream:  
 ![train-dream.gif](https://github.com/pavitrakumar78/DeepDreamsGIF/blob/master/examples/train-dream.gif)  
 
-####An inception style gif from an image:
+#### An inception style gif from an image:
 ```
 python deep-dream.py --input flowers.jpg --gpu 1 --deeper 100
 ```
