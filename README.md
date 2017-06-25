@@ -68,7 +68,7 @@ python deep-dream.py --input bear.gif --gpu 1
   
 #### A much scarier example..  
 ![train.gif](https://github.com/pavitrakumar78/DeepDreamsGIF/blob/master/examples/train.gif)  
-####After applying deepdream:  
+#### After applying deepdream:  
 ![train-dream.gif](https://github.com/pavitrakumar78/DeepDreamsGIF/blob/master/examples/train-dream.gif)  
 
 #### An inception style gif from an image:
